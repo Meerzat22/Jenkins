@@ -1,15 +1,17 @@
 package selenium.locators;
 
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+@Tag("UI")
 public class HW1 extends  BaseUiTest{
 
     @Test
+    @Tag("SMOKE")
     void registration(){
         driver.get("https://demoqa.com/text-box");
         WebElement fullName = driver.findElement(By.id("userName"));
@@ -31,7 +33,5 @@ public class HW1 extends  BaseUiTest{
         WebElement current1 = driver.findElement(By.xpath("//p[@id='currentAddress' and @class='mb-1']"));
         String text = current1.getText();
         System.out.println(text+"2222");
-
     }
-
 }

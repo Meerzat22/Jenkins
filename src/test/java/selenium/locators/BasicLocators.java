@@ -7,7 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 @Tag("UI")
+@Tag("REGRESSION")
 public class BasicLocators extends BaseUiTest {
+
     @Test
     void byIdTest(){
     driver.get("https://demoqa.com/text-box");

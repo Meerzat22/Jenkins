@@ -1,5 +1,6 @@
 package selenium.locators;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+@Tag("UI")
+@Tag("REGRESSION")
 public class XpathDemoTest extends BaseUiTest {
     String nameOfRestaurant = "Кщкщ";
     List<String> listOfMeals = Arrays.asList("Винегрет", "Борщ", "Кола 1л.");

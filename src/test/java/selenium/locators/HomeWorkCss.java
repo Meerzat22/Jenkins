@@ -1,13 +1,13 @@
 package selenium.locators;
 
-
-
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-
+@Tag("UI")
+@Tag("REGRESSION")
 public class HomeWorkCss extends BaseUiTest {
 
     void cssTest() {

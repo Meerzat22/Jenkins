@@ -534,3 +534,207 @@
 [2026-04-02] 21:49:23:108 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\Vaish\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
 [2026-04-02] 21:50:24:839 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
 [2026-04-02] 21:50:24:878 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\Vaish\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-06] 18:50:04:580 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:04:600 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Miquel","email":"trena.cole@gmail.com","gender":"Female","status":"active"}
+[2026-04-06] 18:50:09:282 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:09:368 HttpRequest: 69 [WARN] - {
+    "id": 8426738,
+    "name": "Miquel",
+    "email": "trena.cole@gmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-06] 18:50:09:369 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:09:493 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8426738/posts
+[2026-04-06] 18:50:09:494 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":null,"title":"Test post","body":"Test body"}
+[2026-04-06] 18:50:11:016 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:11:019 HttpRequest: 69 [WARN] - {
+    "id": 275783,
+    "user_id": 8426738,
+    "title": "Test post",
+    "body": "Test body"
+}
+[2026-04-06] 18:50:11:020 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:11:032 HttpRequest: 37 [INFO] - Performed POST public/v2/posts/275783/comments
+[2026-04-06] 18:50:11:032 HttpRequest: 38 [INFO] - Body is {"id":null,"post_id":null,"name":"Sanjar","email":"test1775483411028@test.com","body":"Hello bro"}
+[2026-04-06] 18:50:12:384 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:12:387 HttpRequest: 69 [WARN] - {
+    "id": 186166,
+    "post_id": 275783,
+    "name": "Sanjar",
+    "email": "test1775483411028@test.com",
+    "body": "Hello bro"
+}
+[2026-04-06] 18:50:12:388 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:12:827 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:12:827 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Alphonso","email":"timothy.mueller@yahoo.com","gender":"Female","status":"active"}
+[2026-04-06] 18:50:13:514 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:13:517 HttpRequest: 69 [WARN] - {
+    "id": 8426739,
+    "name": "Alphonso",
+    "email": "timothy.mueller@yahoo.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-06] 18:50:13:518 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:13:527 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8426739/posts
+[2026-04-06] 18:50:13:527 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8426739,"title":"Test title","body":"Test body"}
+[2026-04-06] 18:50:14:237 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:14:240 HttpRequest: 69 [WARN] - {
+    "id": 275784,
+    "user_id": 8426739,
+    "title": "Test title",
+    "body": "Test body"
+}
+[2026-04-06] 18:50:14:241 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:14:246 HttpRequest: 30 [INFO] - Performed GET public/v2/users/8426739/posts
+[2026-04-06] 18:50:15:183 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:15:187 HttpRequest: 69 [WARN] - [
+    {
+        "id": 275784,
+        "user_id": 8426739,
+        "title": "Test title",
+        "body": "Test body"
+    }
+]
+[2026-04-06] 18:50:15:188 HttpRequest: 70 [WARN] - Status code is: 200
+[2026-04-06] 18:50:15:275 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:15:278 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Jocelyn","email":"greg.spinka@yahoo.com","gender":"Female","status":"inactive"}
+[2026-04-06] 18:50:16:001 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:16:004 HttpRequest: 69 [WARN] - {
+    "id": 8426740,
+    "name": "Jocelyn",
+    "email": "greg.spinka@yahoo.com",
+    "gender": "female",
+    "status": "inactive"
+}
+[2026-04-06] 18:50:16:005 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:16:014 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8426740/posts
+[2026-04-06] 18:50:16:015 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8426740,"title":"Test title","body":"Test body"}
+[2026-04-06] 18:50:16:822 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:16:826 HttpRequest: 69 [WARN] - {
+    "id": 275785,
+    "user_id": 8426740,
+    "title": "Test title",
+    "body": "Test body"
+}
+[2026-04-06] 18:50:16:827 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:17:057 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:17:058 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Clayton","email":"darnell.kihn@gmail.com","gender":"Male","status":"active"}
+[2026-04-06] 18:50:18:064 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:18:072 HttpRequest: 69 [WARN] - {
+    "id": 8426741,
+    "name": "Clayton",
+    "email": "darnell.kihn@gmail.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-06] 18:50:18:074 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:18:089 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:18:089 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Hyman","email":"delena.schaefer@yahoo.com","gender":"Female","status":"active"}
+[2026-04-06] 18:50:18:795 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:18:801 HttpRequest: 69 [WARN] - {
+    "id": 8426742,
+    "name": "Hyman",
+    "email": "delena.schaefer@yahoo.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-06] 18:50:18:802 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:18:814 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8426741/todos
+[2026-04-06] 18:50:18:817 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8426742,"title":"Finish testing","due_on":"2026-03-30T12:00:00.000+05:00","status":"pending"}
+[2026-04-06] 18:50:19:554 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:19:557 HttpRequest: 69 [WARN] - {
+    "id": 101802,
+    "user_id": 8426741,
+    "title": "Finish testing",
+    "due_on": "2026-03-30T12:30:00.000+05:30",
+    "status": "pending"
+}
+[2026-04-06] 18:50:19:558 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:19:597 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:19:601 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Annabel","email":"mason.hahn@gmail.com","gender":"Female","status":"active"}
+[2026-04-06] 18:50:20:291 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:20:293 HttpRequest: 69 [WARN] - {
+    "id": 8426743,
+    "name": "Annabel",
+    "email": "mason.hahn@gmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-06] 18:50:20:294 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:21:805 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:21:806 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Genia","email":"almeda.schneider@hotmail.com","gender":"Male","status":"active"}
+[2026-04-06] 18:50:22:520 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:22:522 HttpRequest: 69 [WARN] - {
+    "id": 8426744,
+    "name": "Genia",
+    "email": "almeda.schneider@hotmail.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-06] 18:50:22:522 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:22:524 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:22:525 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Dong","email":"lynn.thiel@gmail.com","gender":"Male","status":"active"}
+[2026-04-06] 18:50:23:842 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:23:861 HttpRequest: 69 [WARN] - {
+    "id": 8426745,
+    "name": "Dong",
+    "email": "lynn.thiel@gmail.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-06] 18:50:23:862 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:23:994 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:23:995 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Clair","email":"marcy.trantow@hotmail.com","gender":"Male","status":"active"}
+[2026-04-06] 18:50:25:045 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:25:049 HttpRequest: 69 [WARN] - {
+    "id": 8426746,
+    "name": "Clair",
+    "email": "marcy.trantow@hotmail.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-06] 18:50:25:049 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:25:060 HttpRequest: 30 [INFO] - Performed GET public/v2/users/8426746
+[2026-04-06] 18:50:25:755 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:25:758 HttpRequest: 69 [WARN] - {
+    "id": 8426746,
+    "name": "Clair",
+    "email": "marcy.trantow@hotmail.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-06] 18:50:25:759 HttpRequest: 70 [WARN] - Status code is: 200
+[2026-04-06] 18:50:25:779 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:25:780 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Inez","email":"daniella.greenfelder@hotmail.com","gender":"Female","status":"active"}
+[2026-04-06] 18:50:26:533 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:26:535 HttpRequest: 69 [WARN] - {
+    "id": 8426747,
+    "name": "Inez",
+    "email": "daniella.greenfelder@hotmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-06] 18:50:26:536 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:26:544 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-06] 18:50:26:546 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Terrence","email":"chas.kihn@gmail.com","gender":"Female","status":"inactive"}
+[2026-04-06] 18:50:27:292 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-06] 18:50:27:303 HttpRequest: 69 [WARN] - {
+    "id": 8426748,
+    "name": "Terrence",
+    "email": "chas.kihn@gmail.com",
+    "gender": "female",
+    "status": "inactive"
+}
+[2026-04-06] 18:50:27:305 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-06] 18:50:31:816 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
+[2026-04-06] 18:50:31:861 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-06] 18:50:43:275 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
+[2026-04-06] 18:50:43:312 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-06] 18:50:46:722 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
+[2026-04-06] 18:50:46:771 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-06] 18:51:00:185 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
+[2026-04-06] 18:51:00:222 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-06] 18:51:17:816 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
+[2026-04-06] 18:51:17:922 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe

@@ -13,6 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 @Tag("UI")
+@Tag("REGRESSION")
 public class WebTableTest extends BaseTest {
 
     @Test

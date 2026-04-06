@@ -2,8 +2,10 @@ package demoQa.forms;
 
 import org.example.demoQa.models.UserPractiseForm;
 import org.example.demoQa.utils.RandomUtils;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
+@Tag("UI")
+@Tag("REGRESSION")
 public class PractiseFormTest extends BasePractiseForn {
 
     @Test
@@ -21,6 +23,7 @@ public class PractiseFormTest extends BasePractiseForn {
     }
 
     @Test
+    @Tag("SMOKE")
     void practiseTest2 (){
 //         System.setProperty("webdriver.firefox.logfile", "/dev/null");
         driver.get("https://demoqa.com/automation-practice-form");

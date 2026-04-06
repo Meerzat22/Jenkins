@@ -7,11 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
-
+@Tag("UNIT")
 public class ParamTest {
     @ParameterizedTest
     @ValueSource(ints = {1,2,3,4,5})
-    @Tag("Smoke")
     void testWithNumbers(int num){
         System.out.println("Numbers: " + num);
     }
@@ -23,15 +22,12 @@ public class ParamTest {
             "2,5,7",
             "5,1,6"
     })
-    @Tag("Regression")
     void testWithNumbers2(int a,int b,int res){
         Assertions.assertEquals(res,a+b);
     }
 
     @RepeatedTest(3)
-    @Tag("Sanity")
     void repeatTest(){
         System.out.println("Koko");
     }
-
 }

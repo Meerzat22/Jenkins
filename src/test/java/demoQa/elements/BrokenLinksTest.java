@@ -14,14 +14,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 @Tag("UI")
+@Tag("REGRESSION")
 public class BrokenLinksTest extends BaseTest {
 
     @FindBy(css = "a[href = 'http://demoqa.com']")
     private WebElement validLink;
     @FindBy(css = "a[href = 'http://the-internet.herokuapp.com/status_codes/500']")
     private WebElement invalidLink;
-
-
 
     @Test
     public void checkLink() throws IOException {

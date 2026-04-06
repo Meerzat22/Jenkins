@@ -18,7 +18,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@Tag("Api")
+@Tag("API")
+@Tag("REGRESSION")
 public class UsersTest {
 
     private static final String CSV_PATH = "src/test/resources/users.csv";
@@ -60,6 +61,7 @@ public class UsersTest {
 
     Integer idUser;
     @Test
+    @Tag("SMOKE")
     void createUserRandom(){
         Users random = RandomUtils.generateUsers();
         Users actualUser1 = userController.createNewUser(random);
@@ -95,11 +97,13 @@ public class UsersTest {
     }
 
     @Test
+    @Tag("SMOKE")
     void getUser(){
         Users user = userController.getUser(userId);
     }
 
     @Test
+    @Tag("SMOKE")
     void updateUserTest() {
         Users random = RandomUtils.generateUsers();
         Users created = userController.createNewUser(random);
@@ -120,6 +124,7 @@ public class UsersTest {
     }
 
     @Test
+    @Tag("SMOKE")
     void delete(){
         int statusCode = userController.deleteUser(userId);
         assertEquals(204, statusCode);

@@ -1,6 +1,7 @@
 package selenium.waits;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,8 @@ import selenium.locators.BaseUiTest;
 
 import java.time.Duration;
 import java.util.Base64;
-
+@Tag("UI")
+@Tag("REGRESSION")
 public class WaitsDemo extends BaseUiTest {
     WebDriver driver = new FirefoxDriver();
     //implicitlyWait - не явное ожидание
@@ -43,8 +45,4 @@ public class WaitsDemo extends BaseUiTest {
 
     }
 }
-
-
-
-
 //implicitlyWait - не явное ожидание

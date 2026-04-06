@@ -67,3 +67,60 @@ tasks.test {
     }
     systemProperty("selenide.headless", "true")
 }
+
+
+tasks.register<Test>("smokeTest") {
+            description = "Runs smoke tests"
+            group = "verification"
+            useJUnitPlatform {
+                includeTags("SMOKE")
+            }
+        }
+
+tasks.register<Test>("regressionTest") {
+    description = "Runs regression tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("REGRESSION")
+    }
+}
+
+tasks.register<Test>("e2eTest") {
+    description = "Runs end-to-end tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("E2E")
+    }
+}
+
+tasks.register<Test>("uiTest") {
+    description = "Runs UI tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("UI")
+    }
+}
+
+tasks.register<Test>("apiTest") {
+    description = "Runs API tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("API")
+    }
+}
+
+tasks.register<Test>("dbTest") {
+    description = "Runs DB tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("DB")
+    }
+}
+
+tasks.register<Test>("unitTest") {
+    description = "Runs unit tests"
+    group = "verification"
+    useJUnitPlatform {
+        includeTags("UNIT")
+    }
+}

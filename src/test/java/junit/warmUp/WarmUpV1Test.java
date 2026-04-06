@@ -1,13 +1,10 @@
 package junit.warmUp;
 
 import org.example.warmUp.WarmUpV1;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
+@Tag("UNIT")
 public class WarmUpV1Test {
     WarmUpV1 obj = new WarmUpV1();
 

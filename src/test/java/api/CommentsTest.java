@@ -12,7 +12,8 @@ import org.example.gorest.models.Users;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-@Tag("Api")
+@Tag("API")
+@Tag("REGRESSION")
 public class CommentsTest {
 
     PostController postController =
@@ -33,6 +34,7 @@ public class CommentsTest {
     }
 
     @Test
+    @Tag("SMOKE")
     void createCommentTest() {
         Comment comment = Comment.builder()
                 .name("Sanjar")

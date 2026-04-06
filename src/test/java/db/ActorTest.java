@@ -11,7 +11,8 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 import java.util.List;
-@Tag("Api")
+@Tag("DB")
+@Tag("REGRESSION")
 public class ActorTest {
 
     @BeforeAll
