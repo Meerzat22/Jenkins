@@ -17,6 +17,11 @@ pipeline {
             defaultValue: '',
             description: 'Укажите test suite (например: ts001, ts002). Оставьте пустым если не нужно'
         )
+        booleanParam(
+            name: 'rerunFailedTests',
+            defaultValue: false,
+            description: 'Перезапустить только упавшие тесты'
+        )
     }
 
     stages {
@@ -29,12 +34,16 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh """
-                    echo "Running ${params.testType} tests on branch ${params.branch}"
-                    if [ -n "${params.testSuite}" ]; then
-                        echo "Test suite: ${params.testSuite}"
-                        ./run_tests.sh --type ${params.testType} --branch ${params.branch} --suite ${params.testSuite}
+                    if [ "${params.rerunFailedTests}" = "true" ]; then
+                        echo "Rerunning FAILED tests only..."
+                        ./run_tests.sh --rerun-failed
                     else
-                        ./run_tests.sh --type ${params.testType} --branch ${params.branch}
+                        echo "Running ${params.testType} tests on branch ${params.branch}"
+                        if [ -n "${params.testSuite}" ]; then
+                            ./run_tests.sh --type ${params.testType} --branch ${params.branch} --suite ${params.testSuite}
+                        else
+                            ./run_tests.sh --type ${params.testType} --branch ${params.branch}
+                        fi
                     fi
                 """
             }
