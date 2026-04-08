@@ -55,6 +55,9 @@ dependencies {
     implementation("org.postgresql:postgresql:42.7.2")
     // Source: https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils
     implementation("commons-dbutils:commons-dbutils:1.8.1")
+
+    implementation("io.qameta.allure:allure-java-commons:2.24.0")
+    testImplementation("io.qameta.allure:allure-junit5:2.24.0")
 }
 
 tasks.test {
