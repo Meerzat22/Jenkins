@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'testType',
+            choices: ['smoke', 'regression', 'e2e', 'db', 'unit'],
+            description: 'Выберите тип тестов'
+        )
+        choice(
+            name: 'branch',
+            choices: ['master', 'ci/add-jenkins-pipeline', 'staging', 'feature/my-feature'],
+            description: 'Выберите ветку'
+        )
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: "${params.branch}", url: 'https://github.com/Meerzat22/Jenkins.git'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh """
+                    echo "Running ${params.testType} tests on branch ${params.branch}"
+                    ./run_tests.sh --type ${params.testType} --branch ${params.branch}
+                """
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline finished. testType=${params.testType}, branch=${params.branch}"
+            allure([
+                results: [[path: 'build/allure-results']]
+            ])
+        }
+        success {
+            echo "Tests passed!"
+        }
+        failure {
+            echo "Tests failed!"
+        }
+    }
+}
