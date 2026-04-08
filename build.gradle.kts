@@ -52,6 +52,11 @@ dependencies {
 
     implementation("org.slf4j:slf4j-api:2.0.9")
     implementation("ch.qos.logback:logback-classic:1.4.11")
+
+    // Allure + Step аннотация
+    testImplementation ("io.qameta.allure:allure-testng:2.25.0")
+    // или если используете JUnit5:
+    testImplementation ("io.qameta.allure:allure-junit5:2.25.0")
 }
 
 tasks.test {

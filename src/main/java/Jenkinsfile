@@ -31,18 +31,11 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            echo "Pipeline finished. testType=${params.testType}, branch=${params.branch}"
-            allure([
-                results: [[path: 'build/allure-results']]
-            ])
-        }
-        success {
-            echo "Tests passed!"
-        }
-        failure {
-            echo "Tests failed!"
-        }
-    }
+   post {
+       always {
+           allure([
+               results: [[path: 'build/allure-results']]  // ← проверьте этот путь!
+           ])
+       }
+   }
 }
