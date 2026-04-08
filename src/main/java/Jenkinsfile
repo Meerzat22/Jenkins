@@ -15,7 +15,7 @@ pipeline {
         string(
             name: 'testSuite',
             defaultValue: '',
-            description: 'Укажите test suite (например: ts001, ts002). Оставьте пустым если не нужно'
+            description: 'Укажите test suite (например: ts001, ts002)'
         )
         booleanParam(
             name: 'rerunFailedTests',
@@ -33,18 +33,9 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh """
-                    if [ "${params.rerunFailedTests}" = "true" ]; then
-                        echo "Rerunning FAILED tests only..."
-                        ./run_tests.sh --rerun-failed
-                    else
-                        echo "Running ${params.testType} tests on branch ${params.branch}"
-                        if [ -n "${params.testSuite}" ]; then
-                            ./run_tests.sh --type ${params.testType} --branch ${params.branch} --suite ${params.testSuite}
-                        else
-                            ./run_tests.sh --type ${params.testType} --branch ${params.branch}
-                        fi
-                    fi
+                bat """
+                    echo Running ${params.testType} tests on branch ${params.branch}
+                    gradlew test -Dtags=${params.testType}
                 """
             }
         }
