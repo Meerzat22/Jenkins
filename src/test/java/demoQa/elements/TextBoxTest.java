@@ -1,6 +1,7 @@
 package demoQa.elements;
 
 import demoQa.BaseTest;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 @Tag("UI")
@@ -8,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class TextBoxTest extends BaseTest {
 
     @Test
-    @Tag("SMOKE")
+    @Tag("TextBoxTest")
     void textBoxTest(){
         driver.get("https://demoqa.com/text-box");
         textBoxPage.fillUserName("Naaame").
