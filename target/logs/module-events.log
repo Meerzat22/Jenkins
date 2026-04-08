@@ -738,3 +738,151 @@
 [2026-04-06] 18:51:00:222 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
 [2026-04-06] 18:51:17:816 WebDriverManager: 1220 [INFO] - Using chromedriver 146.0.7680.165 (resolved driver for Chrome 146)
 [2026-04-06] 18:51:17:922 WebDriverManager: 1282 [INFO] - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe
+[2026-04-08] 14:45:32:336 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-08] 14:45:32:409 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Guadalupe","email":"sharon.wilkinson@gmail.com","gender":"Female","status":"active"}
+[2026-04-08] 14:45:37:764 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:37:873 HttpRequest: 69 [WARN] - {
+    "id": 8429282,
+    "name": "Guadalupe",
+    "email": "sharon.wilkinson@gmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-08] 14:45:37:876 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:38:508 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429282/posts
+[2026-04-08] 14:45:38:509 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429282,"title":"E2E Test Post","body":"E2E Test Body"}
+[2026-04-08] 14:45:39:255 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:39:257 HttpRequest: 69 [WARN] - {
+    "id": 276547,
+    "user_id": 8429282,
+    "title": "E2E Test Post",
+    "body": "E2E Test Body"
+}
+[2026-04-08] 14:45:39:259 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:39:270 HttpRequest: 37 [INFO] - Performed POST public/v2/posts/276547/comments
+[2026-04-08] 14:45:39:271 HttpRequest: 38 [INFO] - Body is {"id":null,"post_id":276547,"name":"E2E Commenter","email":"e2e1775641539266@test.com","body":"E2E Comment Body"}
+[2026-04-08] 14:45:40:047 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:40:052 HttpRequest: 69 [WARN] - {
+    "id": 186221,
+    "post_id": 276547,
+    "name": "E2E Commenter",
+    "email": "e2e1775641539266@test.com",
+    "body": "E2E Comment Body"
+}
+[2026-04-08] 14:45:40:055 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:40:072 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429282/todos
+[2026-04-08] 14:45:40:072 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429282,"title":"E2E Test Todo","due_on":"2026-12-31T00:00:00.000+05:00","status":"pending"}
+[2026-04-08] 14:45:40:793 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:40:798 HttpRequest: 69 [WARN] - {
+    "id": 101853,
+    "user_id": 8429282,
+    "title": "E2E Test Todo",
+    "due_on": "2026-12-31T00:30:00.000+05:30",
+    "status": "pending"
+}
+[2026-04-08] 14:45:40:800 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:41:862 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-08] 14:45:41:863 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Ilene","email":"lindy.kihn@yahoo.com","gender":"Female","status":"active"}
+[2026-04-08] 14:45:43:166 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:43:169 HttpRequest: 69 [WARN] - {
+    "id": 8429283,
+    "name": "Ilene",
+    "email": "lindy.kihn@yahoo.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-08] 14:45:43:170 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:43:904 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429283/posts
+[2026-04-08] 14:45:43:905 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429283,"title":"Post for deleted user","body":"Should fail"}
+[2026-04-08] 14:45:44:629 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:44:632 HttpRequest: 69 [WARN] - [
+    {
+        "field": "user",
+        "message": "must exist"
+    }
+]
+[2026-04-08] 14:45:44:633 HttpRequest: 70 [WARN] - Status code is: 422
+[2026-04-08] 14:45:46:297 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-08] 14:45:46:297 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"","email":"notanemail","gender":"invalid","status":"invalid"}
+[2026-04-08] 14:45:47:588 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:47:590 HttpRequest: 69 [WARN] - [
+    {
+        "field": "name",
+        "message": "can't be blank"
+    },
+    {
+        "field": "gender",
+        "message": "can't be blank, can be male of female"
+    },
+    {
+        "field": "status",
+        "message": "can't be blank"
+    },
+    {
+        "field": "email",
+        "message": "is invalid"
+    }
+]
+[2026-04-08] 14:45:47:591 HttpRequest: 70 [WARN] - Status code is: 422
+[2026-04-08] 14:45:47:606 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-08] 14:45:47:606 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Andreas","email":"avril.ratke@yahoo.com","gender":"Male","status":"active"}
+[2026-04-08] 14:45:48:271 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:48:275 HttpRequest: 69 [WARN] - {
+    "id": 8429285,
+    "name": "Andreas",
+    "email": "avril.ratke@yahoo.com",
+    "gender": "male",
+    "status": "active"
+}
+[2026-04-08] 14:45:48:277 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:48:285 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429285/posts
+[2026-04-08] 14:45:48:286 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429285,"title":"E2E Test Post","body":"E2E Test Body"}
+[2026-04-08] 14:45:49:619 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:49:620 HttpRequest: 69 [WARN] - {
+    "id": 276548,
+    "user_id": 8429285,
+    "title": "E2E Test Post",
+    "body": "E2E Test Body"
+}
+[2026-04-08] 14:45:49:621 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:49:625 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429285/todos
+[2026-04-08] 14:45:49:626 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429285,"title":"Invalid Todo","due_on":null,"status":"invalid_status"}
+[2026-04-08] 14:45:50:307 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:50:308 HttpRequest: 69 [WARN] - [
+    {
+        "field": "status",
+        "message": "can't be blank, can be pending or completed"
+    }
+]
+[2026-04-08] 14:45:50:310 HttpRequest: 70 [WARN] - Status code is: 422
+[2026-04-08] 14:45:51:719 HttpRequest: 37 [INFO] - Performed POST public/v2/users
+[2026-04-08] 14:45:51:720 HttpRequest: 38 [INFO] - Body is {"id":null,"name":"Armando","email":"briana.hermiston@gmail.com","gender":"Female","status":"active"}
+[2026-04-08] 14:45:52:448 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:52:450 HttpRequest: 69 [WARN] - {
+    "id": 8429286,
+    "name": "Armando",
+    "email": "briana.hermiston@gmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[2026-04-08] 14:45:52:451 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:52:458 HttpRequest: 37 [INFO] - Performed POST public/v2/users/8429286/posts
+[2026-04-08] 14:45:52:459 HttpRequest: 38 [INFO] - Body is {"id":null,"user_id":8429286,"title":"E2E Test Post","body":"E2E Test Body"}
+[2026-04-08] 14:45:53:171 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:53:174 HttpRequest: 69 [WARN] - {
+    "id": 276549,
+    "user_id": 8429286,
+    "title": "E2E Test Post",
+    "body": "E2E Test Body"
+}
+[2026-04-08] 14:45:53:176 HttpRequest: 70 [WARN] - Status code is: 201
+[2026-04-08] 14:45:54:603 HttpRequest: 37 [INFO] - Performed POST public/v2/posts/276549/comments
+[2026-04-08] 14:45:54:605 HttpRequest: 38 [INFO] - Body is {"id":null,"post_id":276549,"name":"Commenter","email":"test1775641554599@test.com","body":"Should fail"}
+[2026-04-08] 14:45:56:080 HttpRequest: 68 [WARN] - Response is: 
+[2026-04-08] 14:45:56:089 HttpRequest: 69 [WARN] - [
+    {
+        "field": "post",
+        "message": "must exist"
+    }
+]
+[2026-04-08] 14:45:56:090 HttpRequest: 70 [WARN] - Status code is: 422

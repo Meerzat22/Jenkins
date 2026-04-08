@@ -91,6 +91,10 @@ tasks.register<Test>("regressionTest") {
 tasks.register<Test>("e2eTest") {
     description = "Runs end-to-end tests"
     group = "verification"
+
+    testClassesDirs = sourceSets["test"].output.classesDirs
+    classpath = sourceSets["test"].runtimeClasspath
+
     useJUnitPlatform {
         includeTags("E2E")
     }
